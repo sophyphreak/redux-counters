@@ -23,11 +23,11 @@ const CounterList = ({ counters, addCounter, removeCounter }) => (
       />
     ))}
     <div style={buttonsDivStyle}>
-      <Button onClick={addCounter} style={buttonStyle}>
-        Add Counter
-      </Button>
       <Button onClick={removeCounter} style={buttonStyle}>
         Remove Counter
+      </Button>
+      <Button onClick={addCounter} style={buttonStyle}>
+        Add Counter
       </Button>
     </div>
   </div>
