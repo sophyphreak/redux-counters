@@ -34,7 +34,7 @@ const CounterList = ({ counters, addCounter, removeCounter }) => (
 );
 
 const mapStateToProps = state => ({
-  counters: state.counterList
+  counters: state
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
