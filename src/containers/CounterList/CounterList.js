@@ -6,7 +6,7 @@ class CounterList extends Component {
     super(props);
     this.state = {
       counters: [0]
-    }
+    };
     this.addOne = this.addOne.bind(this);
     this.minusOne = this.minusOne.bind(this);
     this.addCounter = this.addCounter.bind(this);
@@ -34,14 +34,14 @@ class CounterList extends Component {
   }
   render() {
     return (
-      <CounterListView 
+      <CounterListView
         counters={this.state.counters}
         addOne={this.addOne}
         minusOne={this.minusOne}
         addCounter={this.addCounter}
         minusCounter={this.minusCounter}
       />
-    )
+    );
   }
 }
 

@@ -6,8 +6,8 @@ class App extends Component {
   render() {
     return (
       <div>
-      <TitleBar />
-      <CounterList />
+        <TitleBar />
+        <CounterList />
       </div>
     );
   }

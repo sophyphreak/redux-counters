@@ -3,7 +3,7 @@ import React from 'react';
 const divStyle = {
   textAlign: 'center',
   marginTop: '2%'
-}
+};
 
 const TitleBar = () => (
   <div style={divStyle}>
