@@ -25,13 +25,13 @@ const h1Style = {
   margin: '5%'
 }
 
-const SingleCounterView = (props) => (
+const SingleCounterView = ({ counterNumber, count, addOne, minusOne}) => (
   <div style={outerDivStyle}>
-  <h2 style={counterTitleStyle}>Counter #{props.counterNumber}</h2>
+  <h2 style={counterTitleStyle}>Counter #{counterNumber}</h2>
     <div style={innerDivStyle}>
-      <Button onClick={props.minusOne} style={buttonStyle}>Minus One</Button>
-      <h1 style={h1Style}>{props.count}</h1>
-      <Button onClick={props.addOne} style={buttonStyle}>Add One</Button>
+      <Button onClick={minusOne} style={buttonStyle}>Minus One</Button>
+      <h1 style={h1Style}>{count}</h1>
+      <Button onClick={addOne} style={buttonStyle}>Add One</Button>
     </div>
   </div>
 );
