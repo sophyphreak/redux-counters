@@ -15,7 +15,12 @@ const buttonStyle = {
 const CounterList = ({ counters, addCounter, removeCounter }) => (
   <div>
     {counters.map((count, index) => (
-      <SingleCounter key={index} counterNumber={index + 1} count={count} />
+      <SingleCounter
+        key={index}
+        index={index}
+        counterNumber={index + 1}
+        count={count}
+      />
     ))}
     <div style={buttonsDivStyle}>
       <Button onClick={addCounter} style={buttonStyle}>

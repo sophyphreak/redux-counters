@@ -27,15 +27,15 @@ const h1Style = {
   margin: '5%'
 };
 
-const SingleCounter = ({ counterNumber, count, addOne, minusOne }) => (
+const SingleCounter = ({ index, counterNumber, count, addOne, minusOne }) => (
   <div style={outerDivStyle}>
     <h2 style={counterTitleStyle}>Counter #{counterNumber}</h2>
     <div style={innerDivStyle}>
-      <Button onClick={() => minusOne(counterNumber - 1)} style={buttonStyle}>
+      <Button onClick={() => minusOne(index)} style={buttonStyle}>
         Minus One
       </Button>
       <h1 style={h1Style}>{count}</h1>
-      <Button onClick={() => addOne(counterNumber - 1)} style={buttonStyle}>
+      <Button onClick={() => addOne(index)} style={buttonStyle}>
         Add One
       </Button>
     </div>
