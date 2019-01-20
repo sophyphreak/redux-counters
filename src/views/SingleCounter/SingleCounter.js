@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addOne, minusOne } from '../../actions/actions';
 import { Button } from 'reactstrap';
 
 const outerDivStyle = {
@@ -25,19 +27,27 @@ const h1Style = {
   margin: '5%'
 };
 
-const SingleCounterView = ({ counterNumber, count, addOne, minusOne }) => (
+const SingleCounter = ({ counterNumber, count, addOne, minusOne }) => (
   <div style={outerDivStyle}>
     <h2 style={counterTitleStyle}>Counter #{counterNumber}</h2>
     <div style={innerDivStyle}>
-      <Button onClick={minusOne} style={buttonStyle}>
+      <Button onClick={() => minusOne(counterNumber - 1)} style={buttonStyle}>
         Minus One
       </Button>
       <h1 style={h1Style}>{count}</h1>
-      <Button onClick={addOne} style={buttonStyle}>
+      <Button onClick={() => addOne(counterNumber - 1)} style={buttonStyle}>
         Add One
       </Button>
     </div>
   </div>
 );
 
-export default SingleCounterView;
+const mapDispatchToProps = (dispatch, props) => ({
+  addOne: key => dispatch(addOne(key)),
+  minusOne: key => dispatch(minusOne(key))
+});
+
+export default connect(
+  undefined,
+  mapDispatchToProps
+)(SingleCounter);
